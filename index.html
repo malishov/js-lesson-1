@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+
+    //task 1
+    //3 adet sayı tanımla ve bu sayıların karelerinin toplamını hesaplayıp console a yazdır.
+
+    var num1 = 1;
+    var num2 = 2;
+    var num3 = 3;
+
+    var sum = num1 + num2 + num3;
+
+
+    console.log("Sum = ", sum);
+    console.log("Sum^2 = ", sum * sum);
+    console.log("Sum^2 = ", Math.pow(sum, 2));
+
+    console.log(" ")
+    //Task 2
+    // 3 adet sayı tanımla ve bu 3 sayının ortalamasını console a yazdır.
+
+    var avg = sum / 3;
+
+    console.log("Avg = ", avg);
+
+    console.log(" ")
+
+    //Task 3
+    // 1 den 100 e kadar olan sayıları console a yazdır
+    for(let i = 1; i <= 100; i++) {
+        console.log("i = ", i);
+    }
+
+    console.log(" ")
+    //Task 4
+    //1 den 100 e kadar olan çift sayıları console a yazdır
+
+    for(let i = 1; i <= 101; i++) {
+        if(i % 2 == 0) {
+            console.log("i = ", i);
+        }
+    }
+
+    console.log(" ")
+    //Task 5
+    //1 den 100 e kadar 3 e bölünebilen kaç adet sayı var?
+    var count = 0;
+
+    for(let i = 1; i <=101; i++) {
+        if(i % 3 == 0) count++;
+    }
+
+    console.log("Count = ", count);
+
+
+    // Task 6
+    //1 den 100 e kadar olan ASAL sayıları console a yazdır
+
+    var numbers = new Array(numeroPerguntas).fill(true);
+
+    for(let i = 2; i*i <= 100; i++) {
+        if(numbers[i]) {
+        
+            for( let j = i*i; j <= 100; j+=i) {
+                numbers = false
+            }
+        }
+    }
+
+
+    for(let i = 1; i <= 100; i++) {
+        if(numbers[i]) console.log(numbers[i]);
+    }
+    
+
+    console.log(" ")
+    // Task 7
+    //
+
+    for (let i = 0; i < 5; i++) {
+
+        let text = ""
+
+        for(let j = 0; j < 5; j++) {
+            
+            console.log("* ");
+        }
+        console.log("\n");
+    }
+
+</script>
+
+
+</html>
