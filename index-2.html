@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    let full = "cagatay yildiz" ;
+    //C agatay 
+    let full2 = "revan zaKarYali";
+
+    
+    var space = full.indexOf(" ");
+    var name = full.substring(0, space)
+    var surname = full.substring(space + 1)
+    
+    var result = name.substring(0,1).toUpperCase() + name.substring(1).toLowerCase() + " " + surname.substring(0,1).toUpperCase() + surname.substring(1).toLowerCase();
+
+    var space2 = full2.indexOf(" ");
+    var name2 = full2.substring(0, space2)
+    var surname2 = full2.substring(space2 + 1)
+    
+    var result2 = name2.substring(0,1).toUpperCase() + name2.substring(1).toLowerCase() + " " + surname2.substring(0,1).toUpperCase() + surname2.substring(1).toLowerCase();
+
+    function getFullName(...args) {
+        var line = "";
+
+        for(let i = 0; i < args.length; i++) {
+            args[i] = args[i].trim()
+            line += args[i].substring(0,1).toUpperCase() + args[i].substring(1).toLowerCase() + " ";
+        }
+
+        console.log(line);
+    }
+
+    getFullName("    Murad", "     gliShov", "  LLLLLppppp");
+
+
+
+
+</script>
+</html>
+
