@@ -124,10 +124,22 @@
 
     //Task 9
     //Ədədin ikinin üstü olub olmadığını tapın.
-    
     console.log("\nTask #9\n");
-    
-    // Didn't understand the task
+    var num = 256;
+    var flag = false;
+
+
+    for(let i = 2; i <= num; i*= 2) {
+        if(num == i) {
+            flag = true;
+            console.log(i)
+            break;
+        }    
+    }
+
+    //2^0 = 1
+    if(num == 1) console.log(true);
+    else console.log(flag);
 
    // Task 10
    //Ədədin mərtəbəliyini console-a yazıdırın. (Example: 322 - 3, 2005 - 4)
