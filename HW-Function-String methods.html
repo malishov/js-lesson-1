@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    // Task 1
+    // İstəlinən sayda ədədlərin kvadratlarının cəmini tapan bir function yazın.
+    function squareOfNums(...args) {
+        let result = 0;
+        
+        for(let i = 0; i < args.length; i++) result += Math.pow(args[i], 2);
+
+        console.log(result);
+    }
+
+    squareOfNums(2, 3);
+    
+    // Task 2
+    // İstəlinən sayda ədədlərin ədədi ortasını tapan bir function yazın.
+
+    function avgOfNum(...args) {
+        let result = 0;
+
+        for(let i = 0; i < args.length; i++) result += args[i];
+
+        result /= args.length;
+
+        console.log(result);
+    }
+
+    avgOfNum(2, 3);
+
+    // Task 3
+    //  n-dən m-ə qədər x ədədinə tam bölünənlərin cəmini hesablayan bir function yazın.
+    function sumOfNum(n, m, x) {
+        let sum = 0;
+
+        for(let i = n; i <= m; i++) 
+            if(i % x == 0) sum += i
+
+
+        console.log(sum);
+    }
+
+    sumOfNum(2, 10, 3);
+
+    // Task 4
+    // n-dən m-ə qədər sadə ədədlərin cəmini hesablayan bir function yazın.
+    function primeNums(n, m) {
+        let numbers = new Array(m + 1).fill(true);
+
+        for(let i = 2; i*i <= m; i++) {
+            if(numbers[i]) {
+                for(let j = Math.pow(i, 2); j <= m; j += i) {
+                    numbers[j] = false;
+                }
+            }
+        }
+
+        for(let i = n; i <= m; i++) {
+            if(numbers[i]) console.log(i);
+        }
+    }
+
+    primeNums(6, 26);
+
+    // Task 5
+    // Replace methodunu custom olaraq özünüz yazın.
+    // (Custom: Replace istifadə etmədən CustomReplace adında fucntionunuz olur. Həmin function replace ilə eyni nəticəni qaytarmalıdır)
+    
+    function CustomReplace(text, searchValue, newValue) {
+        let words = text.split(" ");
+
+        for(let i = 0; i < words.length; i++) {
+            if(words[i].length >= searchValue.length) {
+
+                if(words[i] == searchValue) {
+                    words[i] = newValue;
+                } 
+                
+                if(words[i].length > searchValue.length) {
+                    let step = searchValue.length;
+
+                    for(let j = 0; j <= words[i].length - step; j++) {
+                        let word = words[i].substring(j, step + j);
+
+                        if(word == searchValue) {
+                            words[i] = newValue + words[i].substring(step + j);
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+
+        text = words.join(" ");
+        console.log(text);
+    }
+    
+    let input = "Mr Blue has a blue house and a blue car!";
+
+    console.log(input.replace("car", "BUS"));
+    CustomReplace(input, "car", "BUS")
+
+</script>
+
+</html>
