@@ -11,13 +11,16 @@
 </body>
 <script>    
 
-    function CustomSubstring(text, start, end) {
+    function CustomSubstring(text, start, end) { 
        
         if(start > end) {
             start += end;
             end = start - end;
             start -= end;
-        }        
+        }
+
+        if(start < 0) start = 0;
+        if(end < 0) end = 0;
 
         let result = "";
 
@@ -31,8 +34,8 @@
 
     let text = "Mr Blue has a blue house and a blue car!";
 
-    console.log(CustomSubstring(text, 5, 3));
-    console.log(text.substring(5, 3));
+    console.log("Custom: ", CustomSubstring(text, -5, -1));
+    console.log("substring: ", text.substring(0, 0));
 
 
 
