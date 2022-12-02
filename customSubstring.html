@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>    
+
+    function CustomSubstring(text, start, end) {
+       
+        if(start > end) {
+            start += end;
+            end = start - end;
+            start -= end;
+        }        
+
+        let result = "";
+
+        for(let i = 0; i < text.length; i++) {
+            if(i >= start && i < end)
+                result += text[i];
+        }        
+
+        return result;
+    }
+
+    let text = "Mr Blue has a blue house and a blue car!";
+
+    console.log(CustomSubstring(text, 5, 3));
+    console.log(text.substring(5, 3));
+
+
+
+</script>
+</html>
