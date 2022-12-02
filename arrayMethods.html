@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    let cities = ['Baku', 'İstanbul', 'Paris', 'Londra', 'Los Angeles', 'Moskova', 'Berlin', 'Bağdat', 'Atina'];
+
+    let count = 0;
+    //1. her saniyede sırayla bir elementi büyük harf yap
+
+    var act = setInterval(() => {        
+
+        cities[count] = cities[count].toUpperCase();
+        console.log(cities);
+        count++;
+
+        if(count == cities.length) clearInterval(act);
+    }, 1000);
+
+
+    /*
+    
+    let internal = setInterval(() => {
+
+        
+        let removedCity = cities.splice(0, 1);
+        cities.push(removedCity[0]);
+        
+
+
+        console.log(cities);
+
+    }, 1000);
+    */
+    let counter = 0;
+    let fullCity = ""
+    let internal2 = setInterval(() => {
+
+        
+        let removedCity = cities.shift();
+        fullCity += removedCity;
+        
+
+
+        //console.log(cities);
+        console.log(fullCity);
+
+    }, 1000);
+
+    
+
+</script>
+</html>

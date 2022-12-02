@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+
+    function CustomSubstr(text, start, length) { 
+        
+        let result = "";
+
+        for(let i = start; i < start + length; i++) {
+            result += text[i];
+        }        
+        
+        return result;
+    }
+
+    let text = "Mr Blue has a blue house and a blue car!";
+
+    console.log(CustomSubstr(text, -3, 3));
+    console.log(text.substr(-3, 3));
+
+</script>
+
+
+</html>
